@@ -10,18 +10,26 @@ jQuery is a JavaScript library that makes doing things in JavaScript easier.
 * Used on millions of websites. 
 * Saves time, work, and thinking
 
-document.addEventListener("load", function() {
+```js
+
+// Plain old JavaScript.
+
+document.addEventListener("DOMContentLoaded", function() {
 	var links = document.getElementsByTagName("a");
 	
 	for (var i=0; i<links.length; i++) {
-		var classes = links[i].attributes.....class.split(" ");
-		classes.push("highlighted");
+		links[i].classList.add("link1");
 	}	
 });
 
+
+
+// Same code in jQuery. 
+ 
 $(function(){
 	$("a").addClass("highlighted");
 });
+```
 
 
 
